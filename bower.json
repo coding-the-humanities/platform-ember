@@ -1,0 +1,19 @@
+{
+  "name": "web-starter-kit",
+  "version": "0.3.0",
+  "homepage": "https://github.com/google/web-starter-kit",
+  "authors": [
+    "Jan Hein Hoogstad <yeehaa123@mac.com>"
+  ],
+  "license": "MIT",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "ember": "~1.5.1"
+  }
+}
