@@ -81,20 +81,36 @@
         <li><a href="styleguide/index.html">Style Guide</a></li>
       </ul>
     </nav>
-    {{ outlet }}
+    <main>
+      {{ outlet }}
+    </main>
   </script>
 
-  <script type="text/x-handlebars" id="index">
-    <main>
+  <script type="text/x-handlebars" data-template-name="posts">
       {{#each}}
-      <div class="featured-spotlight">
-        <div class="image">
-          <img {{bindAttr src=this.image.url}}/>
-          <h1>{{this.title}}</h1>
-        </div>
-      </div>
+        {{post-snippet post=this classNames="featured-spotlight"}}
       {{/each}}
-    </main>
+  </script>
+
+  <script type="text/x-handlebars" data-template-name="components/post-snippet">
+      <div {{action "toggleExpanded" on="click"}} class="image">
+        <img {{bind-attr src=post.image.url}}/>
+        <h1 class="large">{{post.title}}</h1>
+      </div>
+      <section {{bind-attr class=":preview :g-medium--full :g-wide--full isExpanded:expanded"}}>
+        <section class="intro g-wide--3 g-medium--half">
+          <p>"We want to take quantitative data and turn our papers into computer games that convey the theory," sounded the conclusion of the last presentation on last week's Coding the Humanities opening event.</p>
+          <p>But how can we turn theory into quantitative data? And what do you need to make a computer game? This week, we turned from the smaller group projects of week one to a large, collaborative project and started making a game.</p>
+        </section>
+        <section class="meta g-wide--1 g-wide--last g-medium--half g--last">
+          <p>Author(s):</p>
+          <ul class="list-links list-links--secondary">
+            {{#each post.authors}}
+            <li>{{this}}</li>
+            {{/each}}
+          </ul>
+        </section>
+      </section>
   </script>
 
     <script src="vendor/jquery/dist/jquery.js"></script>

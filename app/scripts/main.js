@@ -22,32 +22,64 @@
   var App = Ember.Application.create();
 
   App.Router.map(function() {
+    this.resource('posts', {path: '/'});
   });
 
-  App.IndexRoute = Ember.Route.extend({
+  App.PostsRoute = Ember.Route.extend({
     model: function() {
       return [
         {
-          title: 'Blurred Lines',
+          title: 'From Building to Testing',
+          authors: [
+            'Charlotte van Oostrum',
+            'Marijn Koolen'
+          ],
           image: { 
-            url: "images/blurred-lines.jpg"
+            url: 'images/ashley3.jpg'
+          }
+        }, 
+        {
+          title: 'Blurred Lines',
+          authors: [
+            'Charlotte van Oostrum'
+          ],
+          image: { 
+            url: 'images/blurred-lines.jpg'
           }
         }, 
         {
           title: 'Making Games from Data',
+          authors: [ 
+            'Charlotte van Oostrum',
+            'Sabrina Sauer'
+          ],
           image: { 
-            url: "images/federico.jpg"
+            url: 'images/federico.jpg'
           }
         }, 
         {
           title: 'Starting Full Blast',
+          authors: [ 
+            'Charlotte van Oostrum',
+            'Sabrina Sauer'
+          ],
           image: { 
-            url: "images/blurred-lines.jpg"
+            url: 'images/presentation.jpg'
           }
         } 
-      ]
+      ];
     }
   });
+
+  App.PostSnippetComponent = Ember.Component.extend({
+    actions: {
+      toggleExpanded: function(){
+        this.toggleProperty('isExpanded');
+      }
+    },
+    isExpanded: false
+  });
+
 
   $(document).ready(function(){
     var querySelector = document.querySelector.bind(document);

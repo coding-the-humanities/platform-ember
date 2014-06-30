@@ -701,7 +701,7 @@ pre {
   position: fixed;
   top: 0;
   left: 0;
-  background-color: #404040;
+  background-color: #e5cf39;
   overflow: hidden;
   z-index: 1;
 }
@@ -1814,29 +1814,63 @@ div.highlight > pre > code .il, code .highlight .il {
 * Editorial Header
 *
 **/
-.featured-spotlight {
-  position: relative;
-  margin: 0 0 30px 0;
+.styleguide__feature-spotlight .featured-spotlight {
+  line-height: 0;
+  margin-bottom: 30px;
 }
-.featured-spotlight h1 {
-  padding: 0.3em 0.4em;
-  font-size: 3em;
-  color: #333333;
-  background-color: #e5cf39;
+.styleguide__feature-spotlight .featured-spotlight section {
+  border-bottom: 0;
+}
+
+.featured-spotlight {
+  margin-top: 20px;
+}
+.featured-spotlight .image {
+  clear: both;
+  position: relative;
+  margin: 0 0 0 0;
+}
+.featured-spotlight .image h1 {
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  padding: 10px 15px;
+  background-color: #404040;
+  color: #e5cf39;
   position: absolute;
   bottom: 0;
   left: 0;
   margin: 0;
 }
-.featured-spotlight h1:hover {
-  background-color: #404040;
-  color: #e5cf39;
-}
-.featured-spotlight img {
+.featured-spotlight .image img {
   width: 100vw;
+  height: 100%;
 }
-.featured-spotlight:first-of-type {
-  margin-top: 30px;
+.featured-spotlight .image:hover h1 {
+  color: #404040;
+  background-color: #e5cf39;
+}
+
+.preview {
+  display: none;
+  background-color: #404040;
+  color: white;
+}
+.preview .intro, .preview .meta {
+  padding: 30px;
+}
+.preview .intro p, .preview .meta p {
+  padding-top: 0;
+}
+.preview .meta {
+  float: right;
+  background-color: #e5cf39;
+  color: #404040;
+}
+.preview.expanded {
+  display: block;
+  margin-bottom: 20px;
 }
 
 /**
