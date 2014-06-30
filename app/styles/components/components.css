@@ -1824,6 +1824,8 @@ div.highlight > pre > code .il, code .highlight .il {
 
 .featured-spotlight {
   margin-top: 20px;
+  position: relative;
+  clear: both;
 }
 .featured-spotlight .image {
   clear: both;
@@ -1854,19 +1856,30 @@ div.highlight > pre > code .il, code .highlight .il {
 
 .preview {
   display: none;
-  background-color: #404040;
-  color: white;
+  position: relative;
+  clear: both;
+  background-color: #eeeeee;
 }
 .preview .intro, .preview .meta {
   padding: 30px;
 }
-.preview .intro p, .preview .meta p {
+.preview .intro p:first-of-type, .preview .intro ul, .preview .meta p:first-of-type, .preview .meta ul {
   padding-top: 0;
 }
 .preview .meta {
-  float: right;
-  background-color: #e5cf39;
-  color: #404040;
+  background-color: #404040;
+  color: #e5cf39;
+}
+@media all and (min-width: 800px) {
+  .preview .meta {
+    background-color: #e5cf39;
+    color: #404040;
+    position: absolute;
+    float: right;
+    top: 0;
+    right: 0;
+    bottom: 0;
+  }
 }
 .preview.expanded {
   display: block;

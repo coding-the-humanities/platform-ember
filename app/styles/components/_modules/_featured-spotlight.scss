@@ -15,6 +15,8 @@
 
 .featured-spotlight {
   margin-top: 20px;
+  position: relative;
+  clear: both;
 
   .image {
     clear: both;
@@ -48,21 +50,34 @@
 
 .preview {
   display: none;
-  background-color: $colorGrayDark;
-  color: white;
+  position: relative;
+  clear: both;
+  background-color: $colorGrayLight;
 
   .intro, .meta {
     padding: 30px;
 
-    p {
+    p:first-of-type, ul{
       padding-top: 0;
     }
   }
 
   .meta {
-    float: right;
-    background-color: $colorYellow;
-    color: $colorGrayDark;
+    background-color: $colorGrayDark;
+    color: $colorYellow;
+  }
+
+
+  @media all and (min-width: 800px) {
+    .meta {
+      background-color: $colorYellow;
+      color: $colorGrayDark;
+      position: absolute;
+      float: right;
+      top: 0;
+      right: 0;
+      bottom: 0;
+    }
   }
   
   &.expanded {
