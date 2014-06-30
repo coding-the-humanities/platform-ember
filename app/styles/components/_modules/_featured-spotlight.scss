@@ -4,59 +4,87 @@
 *
 **/
 
+// .featured-spotlight {
+//   background: $colorGrayDark;
+//   color: #ffffff;
+//   overflow: hidden;
+//   padding-bottom: $lineHeight*3 - 1;
+// 
+//   margin-top: $lineHeight*2;
+// 
+//   p {
+//     padding-bottom: $lineHeight;
+//   }
+// 
+//   .cta--primary {
+//     color: #ffffff;
+// 
+//     &:hover {
+//       color: #ffffff;
+//     }
+//   }
+// }
+// 
+// .featured-spotlight__container {
+//   position: relative;
+// }
+// 
+// .featured-spotlight__img {
+//   @include small-only {
+//     padding-top: 33%;
+//     padding-bottom: 0;
+//     height: 0;
+//     overflow: hidden;
+//     position: relative;
+//     width: 100%;
+//   }
+// 
+//   img {
+//     margin: 0 auto;
+//     display: block;
+//     width: 100%;
+// 
+//     position: absolute;
+//     left: 0;
+//     top: 0;
+//     margin: 0;
+// 
+//     @include medium {
+//       width: auto;
+//       max-width: 500px;
+//       left: 100% + $mediumGutterWidth*2;
+//     }
+// 
+//     @include wide {
+//       left: 100% + $wideGutterWidth*2;
+//     }
+//   }
+// }
+
 .featured-spotlight {
-  background: $colorGrayDark;
-  color: #ffffff;
-  overflow: hidden;
-  padding-bottom: $lineHeight*3 - 1;
-
-  margin-top: $lineHeight*2;
-
-  p {
-    padding-bottom: $lineHeight;
-  }
-
-  .cta--primary {
-    color: #ffffff;
-
-    &:hover {
-      color: #ffffff;
-    }
-  }
-}
-
-.featured-spotlight__container {
   position: relative;
-}
+  margin: 0 0 30px 0;
 
-.featured-spotlight__img {
-  @include small-only {
-    padding-top: 33%;
-    padding-bottom: 0;
-    height: 0;
-    overflow: hidden;
-    position: relative;
-    width: 100%;
-  }
-
-  img {
-    margin: 0 auto;
-    display: block;
-    width: 100%;
-
+  h1 {
+    padding: 0.3em 0.4em;
+    font-size: 3em;
+    color: #333333;
+    background-color: $colorYellow;
     position: absolute;
+    bottom: 0;
     left: 0;
-    top: 0;
     margin: 0;
 
-    @include medium {
-      width: auto;
-      max-width: 500px;
-      left: 100% + $mediumGutterWidth*2;
+    &:hover {
+      background-color: $colorGrayDark;
+      color: $colorYellow;
     }
+  }
+  img {
+    width: 100vw;
+  }
 
-    @include wide {
-      left: 100% + $wideGutterWidth*2;
-    }
+  &:first-of-type {
+    margin-top: 30px;
   }
 }

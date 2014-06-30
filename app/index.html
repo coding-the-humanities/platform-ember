@@ -86,90 +86,14 @@
 
   <script type="text/x-handlebars" id="index">
     <main>
+      {{#each}}
       <div class="featured-spotlight">
-        <div class="container-medium">
-          <div class="featured-spotlight__container g--pull-half">
-            <div class="featured-spotlight__img">
-              <img src="../images/federico.jpg" alt="wide image placeholder example">
-            </div>
-            <div class="container-small">
-              <h3 class="xlarge" id="making-games-from-data">making games from data</h3>
-              <p>&quot;we want to take quantitative data and turn our papers into computer games that convey the theory,&quot;</p>
-            </div>
-          </div>
+        <div class="image">
+          <img {{bindAttr src=this.image.url}}/>
+          <h1>{{this.title}}</h1>
         </div>
       </div>
-
-      <div class="featured-spotlight">
-        <div class="container-medium">
-          <div class="featured-spotlight__container g--pull-half">
-            <div class="featured-spotlight__img">
-              <img src="../images/blurred-lines.jpg" alt="wide image placeholder example">
-            </div>
-            <div class="container-small">
-              <h3 class="xlarge" id="making-games-from-data">blurred lines</h3>
-              <p>&quot;we want to take quantitative data and turn our papers into computer games that convey the theory,&quot;</p>
-            </div>
-          </div>
-        </div>
-      </div>
-
-      <div class="featured-spotlight">
-        <div class="container-medium">
-          <div class="featured-spotlight__container g--pull-half">
-            <div class="featured-spotlight__img">
-              <img src="../images/icons/placeholder--wide.png" alt="wide image placeholder example">
-            </div>
-            <div class="container-small">
-              <h3 class="xlarge" id="making-games-from-data">Starting Full Blast</h3>
-              <p>&quot;we want to take quantitative data and turn our papers into computer games that convey the theory,&quot;</p>
-            </div>
-          </div>
-        </div>
-      </div>
-
-      <div class="featured-spotlight">
-        <div class="container-medium">
-          <div class="featured-spotlight__container g--pull-half">
-            <div class="featured-spotlight__img">
-              <img src="../images/icons/placeholder--wide.png" alt="wide image placeholder example">
-            </div>
-            <div class="container-small">
-              <h3 class="xlarge" id="making-games-from-data">blurred lines</h3>
-              <p>&quot;we want to take quantitative data and turn our papers into computer games that convey the theory,&quot;</p>
-            </div>
-          </div>
-        </div>
-      </div>
-
-      <div class="featured-spotlight">
-        <div class="container-medium">
-          <div class="featured-spotlight__container g--pull-half">
-            <div class="featured-spotlight__img">
-              <img src="../images/icons/placeholder--wide.png" alt="wide image placeholder example">
-            </div>
-            <div class="container-small">
-              <h3 class="xlarge" id="making-games-from-data">making games from data</h3>
-              <p>&quot;we want to take quantitative data and turn our papers into computer games that convey the theory,&quot;</p>
-            </div>
-          </div>
-        </div>
-      </div>
-
-      <div class="featured-spotlight">
-        <div class="container-medium">
-          <div class="featured-spotlight__container g--pull-half">
-            <div class="featured-spotlight__img">
-              <img src="../images/icons/placeholder--wide.png" alt="wide image placeholder example">
-            </div>
-            <div class="container-small">
-              <h3 class="xlarge" id="making-games-from-data">blurred lines</h3>
-              <p>&quot;we want to take quantitative data and turn our papers into computer games that convey the theory,&quot;</p>
-            </div>
-          </div>
-        </div>
-      </div>
-
+      {{/each}}
     </main>
   </script>
 

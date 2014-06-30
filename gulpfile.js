@@ -10,6 +10,10 @@ var pagespeed = require('psi');
 var reload = browserSync.reload;
 var bower = require('gulp-bower');
 
+var jshintOptions = {
+  predef: ['$', 'Ember']
+};
+
 gulp.task('bower', function() {
   return bower()
     .pipe(gulp.dest('app/vendor/'))
@@ -18,7 +22,7 @@ gulp.task('bower', function() {
 gulp.task('jshint', function () {
   return gulp.src('app/scripts/**/*.js')
     .pipe(reload({stream: true, once: true}))
-    .pipe($.jshint())
+    .pipe($.jshint(jshintOptions))
     .pipe($.jshint.reporter('jshint-stylish'))
     .pipe($.if(!browserSync.active, $.jshint.reporter('fail')));
 });

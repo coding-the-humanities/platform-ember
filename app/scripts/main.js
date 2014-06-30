@@ -21,6 +21,34 @@
 
   var App = Ember.Application.create();
 
+  App.Router.map(function() {
+  });
+
+  App.IndexRoute = Ember.Route.extend({
+    model: function() {
+      return [
+        {
+          title: 'Blurred Lines',
+          image: { 
+            url: "images/blurred-lines.jpg"
+          }
+        }, 
+        {
+          title: 'Making Games from Data',
+          image: { 
+            url: "images/federico.jpg"
+          }
+        }, 
+        {
+          title: 'Starting Full Blast',
+          image: { 
+            url: "images/blurred-lines.jpg"
+          }
+        } 
+      ]
+    }
+  });
+
   $(document).ready(function(){
     var querySelector = document.querySelector.bind(document);
 
@@ -28,6 +56,7 @@
     var appbarElement = querySelector('.app-bar');
     var menuBtn = querySelector('.menu');
     var main = querySelector('main');
+
 
     function closeMenu() {
       appbarElement.classList.remove('open');

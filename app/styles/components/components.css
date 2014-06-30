@@ -1815,56 +1815,28 @@ div.highlight > pre > code .il, code .highlight .il {
 *
 **/
 .featured-spotlight {
-  background: #404040;
-  color: #ffffff;
-  overflow: hidden;
-  padding-bottom: 77px;
-  margin-top: 52px;
-}
-.featured-spotlight p {
-  padding-bottom: 26px;
-}
-.featured-spotlight .cta--primary {
-  color: #ffffff;
-}
-.featured-spotlight .cta--primary:hover {
-  color: #ffffff;
-}
-
-.featured-spotlight__container {
   position: relative;
+  margin: 0 0 30px 0;
 }
-
-@media only screen and (max-width: 619px) {
-  .featured-spotlight__img {
-    padding-top: 33%;
-    padding-bottom: 0;
-    height: 0;
-    overflow: hidden;
-    position: relative;
-    width: 100%;
-  }
-}
-.featured-spotlight__img img {
-  margin: 0 auto;
-  display: block;
-  width: 100%;
+.featured-spotlight h1 {
+  padding: 0.3em 0.4em;
+  font-size: 3em;
+  color: #333333;
+  background-color: #e5cf39;
   position: absolute;
+  bottom: 0;
   left: 0;
-  top: 0;
   margin: 0;
 }
-@media only screen and (min-width: 620px) {
-  .featured-spotlight__img img {
-    width: auto;
-    max-width: 500px;
-    left: 109%;
-  }
+.featured-spotlight h1:hover {
+  background-color: #404040;
+  color: #e5cf39;
 }
-@media only screen and (min-width: 800px) {
-  .featured-spotlight__img img {
-    left: 107.4%;
-  }
+.featured-spotlight img {
+  width: 100vw;
+}
+.featured-spotlight:first-of-type {
+  margin-top: 30px;
 }
 
 /**
