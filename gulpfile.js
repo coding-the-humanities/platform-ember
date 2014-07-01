@@ -11,7 +11,7 @@ var reload = browserSync.reload;
 var bower = require('gulp-bower');
 
 var jshintOptions = {
-  predef: ['$', 'Ember']
+  predef: ['$', 'Ember', 'marked']
 };
 
 gulp.task('bower', function() {
